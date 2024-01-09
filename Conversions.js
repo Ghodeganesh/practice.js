@@ -14,3 +14,5 @@ console.log(typeof name)
 
 let num=Number(name)
 console.log(typeof num)
+
+
