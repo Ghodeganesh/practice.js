@@ -64,3 +64,6 @@
 //     console.log("var Function")
 // }
 // varFunction()
+// var prompt = require('prompt-sync')();
+// let name=prompt("enter your name: ")
+// console.log("the name of Persone is : ",name)
