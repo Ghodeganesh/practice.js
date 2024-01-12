@@ -33,10 +33,34 @@
 // }
 
 // )
-function handleArray(anyArray){
-    return anyArray
-}
-let myArray=[1,2,3,4,5,6,67,7,8,9]
-// console.log(handleArray(myArray))
-let result=handleArray(myArray)
-console.log(myArray)
+// function handleArray(anyArray){
+//     return anyArray
+// }
+// let myArray=[1,2,3,4,5,6,67,7,8,9]
+// // console.log(handleArray(myArray))
+// let result=handleArray(myArray)
+// console.log(myArray)
+
+// let addTwoNum=(num1,num2)=>num1+num2
+
+// console.log(addTwoNum(4,5))
+// function add(){
+//     console.log(this)
+// }
+// add()
+// let normFun=function(){
+//     console.log(this)
+// }
+// normFun()
+// let arrowFun=()=>{
+//     console.log(this)
+// }
+// arrowFun()
+// hoist()
+// function hoist(){
+//     console.log("hello world How Are You")
+// }
+// let varFunction=function(){
+//     console.log("var Function")
+// }
+// varFunction()
