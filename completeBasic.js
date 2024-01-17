@@ -52,3 +52,38 @@
 // }
 // console.log( details2)
 // console.log(details2["age"])
+
+// function print(){
+//     console.log("hello")
+// }
+// print()
+// let newfun=function(){
+//     console.log("hiiii")
+
+// }
+// newfun()
+
+// let af =(p,d)=>{
+//     console.log("hello00000")
+//     return p+d
+// }
+// let result=af(5,66)
+// console.log("the result is : ",result)
+
+// let info = (obj) => {
+//     console.log(`my name is ${obj.name} and age is ${obj.age} and city ${obj.city}`)
+
+// }
+// info(
+//     {
+//         name: "ganesh",
+//         age: 20,
+//         city: "ulhasnagar"
+//     }
+// )
+// let marks = [33, 45, 66, 98, 23, 77]
+// console.log(marks)
+// let arrHandle = (arr) => {
+//     console.log(arr[4])
+// }
+// arrHandle(marks)
