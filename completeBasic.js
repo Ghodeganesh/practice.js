@@ -87,3 +87,24 @@
 //     console.log(arr[4])
 // }
 // arrHandle(marks)
+
+// let marks = [33, 45, 66, 98, 23, 77]
+// // marks.forEach((items,index,rot)=>{
+// // console.log(items,index,rot)
+// // })
+// // console.log(marks.filter((items)=>{
+// //     return items>=50
+// // }))
+// var cur=0
+// let result=marks.reduce((acc,cur)=>{
+//     return acc+cur
+
+// })
+// console.log(result)
+
+let arr=[1,2,3,4,5,6,7,8,9]
+var cur=0
+let res=arr.reduce((acc,cur)=>{
+    return acc+cur
+})
+console.log("the result is : ",res)
