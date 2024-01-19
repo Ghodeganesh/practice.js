@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Elements Using Dom</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    
+</body>
+<script>
+    // let div=document.createElement('div')
+    // div.innerHTML="Ganesh Ghode"
+    // // let addText=document.createTextNode("ganesh ghode")
+    // // div.appendChild(addText)
+    // div.style.backgroundColor="green"
+    // div.style.padding="20px"
+
+    // document.body.appendChild(div)
+ function creatBox(colour){
+    
+    let box=document.createElement('div')
+    let text=document.createTextNode("Hello Guys")
+    box.style.padding="20px"
+    box.style.width="150px";
+    box.style.height="150px"
+    box.style.backgroundColor=`${colour}`
+    box.style.border="3px solid black"
+   console.log(box.appendChild(text))
+   text.replaceWith("Ganesh Ghode")
+
+   document.body.appendChild(box)
+ }
+ creatBox("green")
+ creatBox("yellow")
+ creatBox("pink")
+ creatBox("tomato")
+</script>
+</html>
