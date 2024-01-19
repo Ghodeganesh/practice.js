@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project2 Using Javascript</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: palevioletred;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+
+        }
+
+        .container {
+            border: 2px solid black;
+            padding: 15px;
+            width: 40vw;
+            margin: auto;
+            height: 100%;
+            background-color: rgb(199, 206, 206);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+            /* justify-content: center; */
+        }
+
+        .submit {
+            padding: 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: rgb(171, 184, 184);
+            margin-top: 8px;
+        }
+
+        .inp {
+            margin: 10px;
+        }
+
+        #Height,
+        #Weight {
+            padding: 2px;
+        }
+
+        .bmi-guid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+            padding-left: 10px;
+        }
+        .result{
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>BMI CALCULATOR</h2>
+        <div class="inp">
+
+            <form>
+                <div class="inp"><label for="Height">Height In Cm :</label>
+                    <input type="text" name="Height" id="Height">
+                </div>
+                <div class="inp"><label for="Weight">Weight In Kg :</label>
+                    <input type="text" name="Weight" id="Weight">
+                </div>
+                <button class="submit">Calculate</button>
+
+            </form>
+            <div class="result">
+                <!-- Lorem ipsum dolor sit amet. -->
+                
+            </div>
+        </div>
+        <div class="bmi-guid">
+            <h2>Bmi Weight Guide</h2>
+            <p>Under Weight = Less Than 18.9</p>
+            <p>Normal Range = 18.9 and 20.6</p>
+            <p>Over Weight = Greater Than 28.9</p>
+        </div>
+    </div>
+    <script>
+       let form=document.querySelector('form')
+       console.log(form) 
+      
+       form.addEventListener("submit", function(e){
+        e.preventDefault()
+       let height=parseInt(document.querySelector("#Height").value)
+       let Weight=parseInt(document.querySelector("#Weight").value)
+       let result=document.querySelector('.result')
+
+       if(height==="" || height<0 || isNaN(height)){
+        result.innerHTML=`Please Give Valid Height ${height}`
+       }
+       else if(Weight==="" || Weight<0 || isNaN(Weight)){
+        result.innerHTML=`Please Give Valid Weight ${Weight}`
+       }else{
+        let total=(Weight/((height*height)/10000)).toFixed(3)
+        result.innerHTML=`${total}`
+
+       }
+       
+    
+
+       })                               
+        
+    </script>
+</body>
+
+</html>
