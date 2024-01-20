@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Guess</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(242, 31, 112);
+            
+        }
+        .main{
+            width: 40vw;
+            padding: 1.3rem;
+            height: 90vh;
+            background-color: rgb(87, 79, 79);
+            border-radius: 15px;
+            color: aliceblue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        .submit{
+            padding: 0.5rem 1.3rem;
+            background-color: rgb(0, 0, 0);
+            border-radius: 9px;
+            color: aliceblue;
+            border: 2px solid rgb(12, 7, 0);
+        }
+        .inpt{
+            padding: 0.4rem;
+            /* margin: 1rem; */
+        }
+        .inp{
+            margin: 1rem 0rem;
+        }
+        .para,.head{
+            margin: 1rem;
+            text-align: center;
+        }
+        .foot{
+            margin-top:1rem ;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2> Number Guessing Game </h2>
+        <div class="main">
+            <p class="para">Try And Guess The Random Number From 1 To 100
+                You Have 10 Numbers To Guess The Number
+            </p>
+            <h2 class="head">Guess The Number : </h2>
+            <div class="inp">
+                <input type="text" class="inpt">
+            </div>
+            <button class="submit">Submit Guess</button>
+            <div class="foot">
+                <p>Previous Gues : </p>
+                <p>Guess Remaining : </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        let input=parseInt(document.querySelector('.inpt').value)
+        console.log(input)
+    </script>
+
+</body>
+
+</html>
