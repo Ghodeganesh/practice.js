@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchrounous Language</title>
+    <style>
+        .name {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        .conatainer {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="conatainer">
+
+        <div class="name">
+            <h2>To change Background Colour Click on Start</h2>
+            <div>
+                <button class="start">start</button>
+                <button class="stop">stop</button>
+
+
+            </div>
+            <div class="content"></div>
+
+        </div>
+    </div>
+
+
+    <script>
+        let content = document.querySelector('.content')
+        let start = document.querySelector('.start')
+        console.log(start)
+        let stop = document.querySelector('.stop')
+        console.log(stop)
+        let colorGenerate = function () {
+            let color = "#"
+            let hex = "0123456789ABCDEF"
+            for (let i = 0; i < 6; i++) {
+                color = color + hex[Math.floor(Math.random() * 16)]
+                console.log(color)
+
+            }
+            return color
+        }
+         let random;
+         start.addEventListener('click',function(){
+           random= setInterval(function(){
+              
+                content.innerHTML=colorGenerate()
+                document.body.style.backgroundColor=colorGenerate()
+            },1000)
+           
+         })
+         stop.addEventListener("click",function(){
+            clearInterval(random)
+            random=null
+         })
+        
+    </script>
+</body>
+
+</html>
