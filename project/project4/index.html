@@ -57,6 +57,9 @@
             flex-direction: column;
             gap: 1rem;
         }
+        .form{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -68,22 +71,39 @@
                 You Have 10 Numbers To Guess The Number
             </p>
             <h2 class="head">Guess The Number : </h2>
-            <div class="inp">
-                <input type="text" class="inpt">
-            </div>
-            <button class="submit">Submit Guess</button>
-            <div class="foot">
-                <p>Previous Gues : </p>
-                <p>Guess Remaining : </p>
-            </div>
+            <form class="form">
+                <div class="inp">
+                    <input type="text" class="inpt">
+                </div>
+                <button class="submit">Submit Guess</button>
+            </form>
+                <div class="foot">
+                    <p>Previous Gues :<span id="val1"></span> </p>
+                    <p>Guess Remaining :<span id="val2"></span></p>
+                </div>
+
+           
+          
 
         </div>
 
     </div>
 
     <script>
-        let input=parseInt(document.querySelector('.inpt').value)
-        console.log(input)
+       let submit=document.querySelector('.submit')
+       let val1=document.getElementById('val1')
+       let form=document.querySelector('form')
+       form.addEventListener('submit',function(e){
+        e.preventDefault()
+       let input=Number(document.querySelector('.inpt').value)
+
+        console.log(e.target)
+        
+       val1.innerHTML=input
+       val1.push
+       })
+      
+
     </script>
 
 </body>
