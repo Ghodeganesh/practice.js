@@ -34,14 +34,14 @@
 // info()
 
 
-function info(username,age,degree){
-     this.username=username
-     this.age=age
-     this.degree=degree
-}
-info.prototype.printMe=function(){
-    console.log(`my name is ${this.username} and My age is ${this.age}`)
-}
-let one=new info("ganesh",20,"computer")
-console.log(one)
-console.log(one.printMe())
+// function info(username,age,degree){
+//      this.username=username
+//      this.age=age
+//      this.degree=degree
+// }
+// info.prototype.printMe=function(){
+//     console.log(`my name is ${this.username} and My age is ${this.age}`)
+// }
+// let one=new info("ganesh",20,"computer")
+// console.log(one)
+// console.log(one.printMe())
